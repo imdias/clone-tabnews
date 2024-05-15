@@ -1,5 +1,7 @@
 root = true
 
+/* quanod acrescentamos [*] ele passará a fazer parte de todos os documentos */
+
 [*] 
 indent_style = space
 indent_size = 2
