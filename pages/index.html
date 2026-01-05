@@ -1,0 +1,696 @@
+//function Home() { // return
+<h1>Página em construção.</h1>
+; //} // export default Home;
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Igor Morais Dias | Engineering Manager</title>
+    <meta
+      name="description"
+      content="Engineering Manager com 12+ anos de experiência em transformação operacional, FinOps e liderança técnica. R$250k economizados, 21+ engenheiros liderados."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #0f172a;
+        --secondary: #334155;
+        --accent: #3b82f6;
+        --text: #1e293b;
+        --text-light: #64748b;
+        --bg: #ffffff;
+        --bg-alt: #f8fafc;
+        --border: #e2e8f0;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--bg);
+      }
+
+      /* Header */
+      header {
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.95);
+      }
+
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--primary);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      /* Hero Section */
+      .hero {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 6rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .hero-content .subtitle {
+        font-size: 1.5rem;
+        color: var(--accent);
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+      }
+
+      .hero-content p {
+        font-size: 1.125rem;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .btn {
+        padding: 0.875rem 1.75rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.2s;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .btn-primary {
+        background: var(--accent);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: #2563eb;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--border);
+      }
+
+      .btn-secondary:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .profile-placeholder {
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), #8b5cf6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 6rem;
+        font-weight: 600;
+        box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+      }
+
+      /* Stats Section */
+      .stats {
+        background: var(--bg-alt);
+        padding: 4rem 2rem;
+      }
+
+      .stats-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+
+      .stat-card {
+        text-align: center;
+        padding: 2rem;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      /* Experience Section */
+      .section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 6rem 2rem;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      .experience-grid {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .experience-card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 2rem;
+        transition: all 0.2s;
+      }
+
+      .experience-card:hover {
+        border-color: var(--accent);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 1rem;
+      }
+
+      .experience-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--primary);
+      }
+
+      .experience-company {
+        color: var(--accent);
+        font-weight: 500;
+        margin-top: 0.25rem;
+      }
+
+      .experience-period {
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      .experience-description {
+        color: var(--text-light);
+        margin-top: 1rem;
+      }
+
+      .highlights {
+        margin-top: 1.5rem;
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .highlight-item {
+        display: flex;
+        align-items: start;
+        gap: 0.75rem;
+        color: var(--text);
+      }
+
+      .highlight-item::before {
+        content: "▸";
+        color: var(--accent);
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      /* Skills Section */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .skill-category {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 2rem;
+      }
+
+      .skill-category h3 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+      }
+
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .skill-tag {
+        padding: 0.5rem 1rem;
+        background: var(--bg-alt);
+        border-radius: 20px;
+        font-size: 0.9rem;
+        color: var(--text);
+      }
+
+      /* Contact Section */
+      .contact {
+        background: var(--bg-alt);
+        padding: 6rem 2rem;
+      }
+
+      .contact-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .contact-content h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      .contact-content p {
+        font-size: 1.125rem;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+      }
+
+      .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .contact-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 1.5rem;
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        text-decoration: none;
+        color: var(--text);
+        transition: all 0.2s;
+      }
+
+      .contact-link:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        transform: translateY(-2px);
+      }
+
+      /* Footer */
+      footer {
+        background: var(--primary);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      footer p {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Responsive */
+      @media (max-width: 968px) {
+        .hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .stats-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-buttons {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .nav-links {
+          gap: 1rem;
+        }
+
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .hero-content .subtitle {
+          font-size: 1.25rem;
+        }
+
+        .stats-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .profile-placeholder {
+          width: 240px;
+          height: 240px;
+          font-size: 4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">Igor Morais Dias</div>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="sobre">
+      <div class="hero-content">
+        <h1>Igor Morais Dias</h1>
+        <div class="subtitle">Engineering Manager</div>
+        <p>
+          Especialista em transformação operacional, FinOps e liderança técnica.
+          12+ anos construindo times de alto desempenho e entregando resultados
+          mensuráveis em ambientes de crescimento acelerado.
+        </p>
+        <div class="cta-buttons">
+          <a href="#contato" class="btn btn-primary">Entre em Contato</a>
+          <a href="#experiencia" class="btn btn-secondary">Ver Experiência</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="profile-placeholder">IM</div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">12+</div>
+          <div class="stat-label">Anos de Experiência</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">21+</div>
+          <div class="stat-label">Engenheiros Liderados</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">R$250k</div>
+          <div class="stat-label">Economizados em Infraestrutura</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">99.6%</div>
+          <div class="stat-label">Redução de SLA</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experiencia">
+      <h2 class="section-title">Experiência Profissional</h2>
+      <div class="experience-grid">
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <div class="experience-title">
+                Coordenador de Engenharia de Software
+              </div>
+              <div class="experience-company">Agrotools | AgTech B2B SaaS</div>
+            </div>
+            <div class="experience-period">Mar/2023 - Presente</div>
+          </div>
+          <div class="experience-description">
+            Liderança técnica e estratégica de engenharia de software (7 devs
+            diretos, 21+ gerenciados ao longo de 3 anos) e qualidade (5 QAs -
+            gestão interina 10 meses).
+          </div>
+          <div class="highlights">
+            <div class="highlight-item">
+              Economia de R$250k anuais através de otimização de storage
+              (eliminação de imagens obsoletas + migração para Sentinel)
+            </div>
+            <div class="highlight-item">
+              Reduzi SLA de provisionamento de infraestrutura em 99.6% (3 dias →
+              15min) com implementação de IaC (Terraform)
+            </div>
+            <div class="highlight-item">
+              Recuperação de projeto enterprise crítico (R$100k+) após saída de
+              gestor anterior, escalando capacidade em 900% (3k → 30k
+              territórios)
+            </div>
+            <div class="highlight-item">
+              Criei dashboard executivo em Power BI (4 métricas: throughput,
+              cycle time, rework rate, plan vs actual) usado diariamente pela
+              coordenação e semanalmente pela diretoria
+            </div>
+            <div class="highlight-item">
+              Implementação da Pirâmide de Testes em parceria com consultoria,
+              reduzindo bugs críticos e tempo de regression
+            </div>
+            <div class="highlight-item">
+              Participação em sessão de planejamento estratégico anual com
+              C-Level, conectando OKRs técnicos a objetivos de negócio usando
+              DORA Metrics
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <div class="experience-title">Scrum Master</div>
+              <div class="experience-company">Agrotools</div>
+            </div>
+            <div class="experience-period">Fev/2021 - Mar/2023</div>
+          </div>
+          <div class="experience-description">
+            Liderança da transformação ágil em squads de Infraestrutura e
+            Desenvolvimento.
+          </div>
+          <div class="highlights">
+            <div class="highlight-item">
+              Implementei métricas de fluxo (Lead Time, Cycle Time, CFD)
+              aumentando previsibilidade de entregas
+            </div>
+            <div class="highlight-item">
+              Atuação estratégica com POs na priorização de backlogs utilizando
+              WSJF e RICE scoring
+            </div>
+            <div class="highlight-item">
+              Facilitação de cerimônias ágeis para times de até 12 pessoas
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <div class="experience-title">Scrum Master</div>
+              <div class="experience-company">
+                ISA CTEEP | Transmissão de Energia
+              </div>
+            </div>
+            <div class="experience-period">Fev/2020 - Fev/2021</div>
+          </div>
+          <div class="experience-description">
+            Implementação de metodologias ágeis em time de Supply Chain.
+            Acumulei responsabilidades de Assistente Administrativo durante
+            transição organizacional.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <h2 class="section-title">Competências-Chave</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Gestão de Engenharia</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">People Management</span>
+            <span class="skill-tag">Hiring</span>
+            <span class="skill-tag">Performance Management</span>
+            <span class="skill-tag">Tech Leadership</span>
+            <span class="skill-tag">Vendor Management</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Excelência Operacional</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">FinOps</span>
+            <span class="skill-tag">Capacity Planning</span>
+            <span class="skill-tag">Cost Optimization</span>
+            <span class="skill-tag">Process Improvement</span>
+            <span class="skill-tag">SLA Management</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Governança & Qualidade</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Release Management</span>
+            <span class="skill-tag">Test Strategy</span>
+            <span class="skill-tag">Risk Mitigation</span>
+            <span class="skill-tag">ISO 27001</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Ferramentas & Plataforma</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Azure DevOps</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">IaC</span>
+            <span class="skill-tag">SAP</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Estratégia</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">OKR Framework</span>
+            <span class="skill-tag">DORA Metrics</span>
+            <span class="skill-tag">C-Level Alignment</span>
+            <span class="skill-tag">Data-Driven Culture</span>
+            <span class="skill-tag">Crisis Leadership</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Certificações</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Tech Lead Program (IFTL)</span>
+            <span class="skill-tag">KMP I & II</span>
+            <span class="skill-tag">Mackenzie (ADS)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contato">
+      <div class="contact-content">
+        <h2>Vamos Conversar?</h2>
+        <p>
+          Estou aberto a oportunidades de Engineering Manager, Head de
+          Engenharia ou posições de liderança técnica em scale-ups, empresas de
+          produto ou consultorias de transformação.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:igordias.md@gmail.com" class="contact-link">
+            <span>📧</span>
+            <span>igordias.md@gmail.com</span>
+          </a>
+          <a
+            href="https://linkedin.com/in/igordias-md"
+            target="_blank"
+            class="contact-link"
+          >
+            <span>💼</span>
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="https://github.com/imdias"
+            target="_blank"
+            class="contact-link"
+          >
+            <span>💻</span>
+            <span>GitHub</span>
+          </a>
+          <a href="tel:+5511957236021" class="contact-link">
+            <span>📱</span>
+            <span>+55 11 95723-6021</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Igor Morais Dias. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
